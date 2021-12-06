@@ -1,0 +1,42 @@
+            <div class="col text-center text-light" id="projects-wrapper">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#create-project">
+                    Create Project
+                </button>
+                
+                <div class="modal fade text-dark" id="create-project" tabindex="-1" aria-labelledby="create-project-label" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="create-project-label">Create Project</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div>
+                                            <label for="title" class="form-label">Project Title</label>
+                                            <input type="text" class="form-control" id="title">
+                                        </div>
+                                        <div>
+                                            <label for="tech" class="form-label">Technologies</label>
+                                            <input type="text" class="form-control" id="tech">
+                                        </div>
+                                        <div>
+                                            <label for="desc" class="form-label">Description</label>
+                                            <input type="text" class="form-control" id="desc">
+                                        </div>
+                                        <div>
+                                            <label for=link class="form-label">GitHub Link</label>
+                                            <input type="text" class="form-control" id="link">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-primary" id="save-button">Save</button>
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Dynamically created code-->
+            </div>
+            <script src="admin.js"></script>

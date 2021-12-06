@@ -1,20 +1,29 @@
-function sendEmail() {
-    fetch("/contact/api/email", {
+function authenticate() {
+
+    fetch("/login/api/loginInfo", {
         method: "POST",
         headers: {"Content-type": "application/json; charset=UTF-8"},
         body: JSON.stringify({
-            email: document.getElementById("yourEmail").value,
-            subject: document.getElementById("yourSubject").value,
-            content: document.getElementById("yourContent").value
+            username: document.getElementById("username").value,
+            password: document.getElementById("password").value,
         })
     }).then(response => {
+
         if (response.status === 200) {
-            toastr["success"]("E-mail Sent");
+            toastr["success"]("Login Successful");
+            setTimeout(() => location.href = "/admin", 1000);
+        } else if (response.status === 401) {
+            toastr["error"]("Check Credentials");
+            setTimeout(() => location.href = "/login", 3000);
         }
     })
 }
 
-document.getElementById("buttonSendEmail").addEventListener("click", sendEmail);
+document.getElementById("formlogin").addEventListener("submit", e => {
+    e.preventDefault();
+    authenticate();
+} );
+
 
 toastr.options = {
     "closeButton": false,
@@ -33,3 +42,4 @@ toastr.options = {
     "showMethod": "fadeIn",
     "hideMethod": "fadeOut"
 }
+
