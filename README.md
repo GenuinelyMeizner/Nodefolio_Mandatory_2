@@ -1,7 +1,7 @@
 # Nodefolio
 Welcome to my submission of Mandatory 2 in NodeJS
 
-#### How to get going:
+## How to get going:
 
 Run the following commands:
 
@@ -10,7 +10,7 @@ Run the following commands:
 
 You are now good to go.
 
-#### Nodemailer
+## Nodemailer
 
 As I have no desire to share my private e-mail or create a new one, I have utilized etheral.email to randomly generate an e-mail with a password.
 
